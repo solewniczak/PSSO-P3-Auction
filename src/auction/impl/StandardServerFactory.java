@@ -8,10 +8,12 @@ import auction.IServerFactory;
 //Abstract Factory
 public class StandardServerFactory implements IServerFactory {
 
+	// Singleton
+	protected static IAuctionServer uniqueInstance = new StandardServerImpl();
+
 	@Override
 	public IAuctionServer createServer() throws RemoteException {
-		IAuctionServer aServer = StandardServerImpl.instance();
-		return aServer;
+		return uniqueInstance;
 	}
 
 }

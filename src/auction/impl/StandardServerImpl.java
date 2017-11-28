@@ -24,13 +24,7 @@ public class StandardServerImpl implements IAuctionServer {
 
 	protected Registry m_registry;
 
-	// Singleton
-	protected static IAuctionServer uniqueInstance = new StandardServerImpl();
-	public static IAuctionServer instance() {
-		return uniqueInstance;
-	}
-
-	protected StandardServerImpl() {
+	public StandardServerImpl() {
 		items.add(new Item("Ada", "rower", "rower gorski", 500.0, 60 * 60));
 		items.add(new Item("Ada", "radio", "radio tranzystorowe", 100.0, 60 * 60));
 		items.add(new Item("Beata", "laptop", "Inter i7", 2000.0, 60));
