@@ -19,18 +19,18 @@ import auction.support.Item;
  */
 public class StandardServerImpl implements IAuctionServer {
 
-	private List<Item> items = new ArrayList<Item>();
-	private List<IAuctionListener> observers = new ArrayList<IAuctionListener>();
+	protected List<Item> items = new ArrayList<Item>();
+	protected List<IAuctionListener> observers = new ArrayList<IAuctionListener>();
 
-	private Registry m_registry;
+	protected Registry m_registry;
 
 	// Singleton
-	private static StandardServerImpl uniqueInstance = new StandardServerImpl();
-	public static StandardServerImpl instance() {
+	protected static IAuctionServer uniqueInstance = new StandardServerImpl();
+	public static IAuctionServer instance() {
 		return uniqueInstance;
 	}
 
-	private StandardServerImpl() {
+	protected StandardServerImpl() {
 		items.add(new Item("Ada", "rower", "rower gorski", 500.0, 60 * 60));
 		items.add(new Item("Ada", "radio", "radio tranzystorowe", 100.0, 60 * 60));
 		items.add(new Item("Beata", "laptop", "Inter i7", 2000.0, 60));

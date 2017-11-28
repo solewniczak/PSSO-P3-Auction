@@ -44,7 +44,7 @@ public class ClientUserInterface {
 	static String clientName;
 
 	// Auction client instance
-	private StandardClientImpl m_client;
+	protected StandardClientImpl m_client;
 
 	// Columns
 	public static final int COLUMN_OWNER_NAME = 0;
@@ -55,16 +55,16 @@ public class ClientUserInterface {
 	public static final int COLUMN_AUCTION_TIME = 5;
 
 	// User interface variables
-	private JFrame frame;
-	private DefaultTableModel tableModel;
-	private JTextField itemNameTextField;
-	private JTextField itemDescTextField;
-	private JTextField itemStartBidTextField;
-	private JTextField itemTimeField;
+	protected JFrame frame;
+	protected DefaultTableModel tableModel;
+	protected JTextField itemNameTextField;
+	protected JTextField itemDescTextField;
+	protected JTextField itemStartBidTextField;
+	protected JTextField itemTimeField;
 
-	private JTextField bidRateTextField;
+	protected JTextField bidRateTextField;
 
-	private JTextField strategyUpToMaxMaxTextField;
+	protected JTextField strategyUpToMaxMaxTextField;
 
 	/**
 	 * Create the application.
