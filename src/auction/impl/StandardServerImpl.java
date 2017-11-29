@@ -23,11 +23,16 @@ public class StandardServerImpl implements IAuctionServer {
 	protected List<IAuctionListener> observers = new ArrayList<IAuctionListener>();
 
 	protected Registry m_registry;
-
-	public StandardServerImpl() {
+	
+	public void loadItems() {
 		items.add(new Item("Ada", "rower", "rower gorski", 500.0, 60 * 60));
 		items.add(new Item("Ada", "radio", "radio tranzystorowe", 100.0, 60 * 60));
 		items.add(new Item("Beata", "laptop", "Inter i7", 2000.0, 60));
+	}
+
+	public StandardServerImpl() {
+		
+		loadItems();
 
 		try {
 			// Define service name
